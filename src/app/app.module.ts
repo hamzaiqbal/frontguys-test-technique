@@ -4,7 +4,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SharedModule } from 'src/app/shared-module/shared.module';
-import { SuperHerosModule } from 'src/app/superheros-module/superheros.module';
+import { SuperHeroesModule } from 'src/app/superheroes-module/superheroes.module';
 
 @NgModule({
 	declarations: [AppComponent],
@@ -13,7 +13,7 @@ import { SuperHerosModule } from 'src/app/superheros-module/superheros.module';
 		AppRoutingModule,
 		HttpClientModule,
 		SharedModule,
-		SuperHerosModule
+		SuperHeroesModule
 	],
 	providers: [],
 	bootstrap: [AppComponent]

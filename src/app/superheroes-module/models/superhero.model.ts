@@ -1,7 +1,7 @@
 import { IApiReponse } from 'src/app/shared-module/models';
-import { SuperHeroAlignment, SuperHeroGender } from 'src/app/superheros-module/enums';
+import { SuperHeroAlignment, SuperHeroGender } from 'src/app/superheroes-module/enums';
 
-export interface ISuperHerosSearchResults extends IApiReponse {
+export interface ISuperHeroesSearchResults extends IApiReponse {
 	'results-for': string;
 	results: ISuperHero[];
 }
