@@ -1,4 +1,4 @@
 export const environment = {
 	production: true,
-	apiUrl: 'https://superheroapi.com/api/4653198644706509',
+	apiUrl: 'https://github.com/akabab/superhero-api/tree/0.3.0/api/'
 };

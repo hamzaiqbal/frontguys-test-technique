@@ -1,5 +1,5 @@
 export enum SuperHeroGender {
 	Unknown = '-',
-	Male = 'male',
-	Female = 'female'
+	Male = 'Male',
+	Female = 'Female'
 }

@@ -1,20 +1,15 @@
-import { IApiReponse } from 'src/app/shared-module/models';
 import { SuperHeroAlignment, SuperHeroGender } from 'src/app/superheroes-module/enums';
-
-export interface ISuperHeroesSearchResults extends IApiReponse {
-	'results-for': string;
-	results: ISuperHero[];
-}
 
 export interface ISuperHero {
 	id: number;
 	name: string;
+	slug: string;
 	powerstats: ISuperHeroPowerstats;
 	appearance: ISuperHeroAppearance;
 	biography: ISuperHeroBiography;
 	work: ISuperHeroWork;
 	connections: ISuperHeroConnections;
-	image: ISuperHeroImage;
+	images: ISuperHeroImages;
 }
 
 export interface ISuperHeroPowerstats {
@@ -55,6 +50,9 @@ export interface ISuperHeroConnections {
 	relatives: string;
 }
 
-export interface ISuperHeroImage {
-	url: string;
+export interface ISuperHeroImages {
+	xs: string;
+	sm: string;
+	md: string;
+	lg: string;
 }

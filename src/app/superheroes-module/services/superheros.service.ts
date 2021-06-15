@@ -1,5 +1,5 @@
 import { environment } from 'src/environments/environment';
-import { ISuperHero, ISuperHeroesSearchResults } from './../models/superhero.model';
+import { ISuperHero } from './../models/superhero.model';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
@@ -12,14 +12,14 @@ export class SuperHeroesService {
 	constructor(private http: HttpClient) {
 	}
 
-	search(term: string): Observable<ISuperHeroesSearchResults> {
-		const url = `${environment.apiUrl}/search/${term}`;
+	getAll(): Observable<ISuperHero[]> {
+		const url = `${environment.apiUrl}/all.json`;
 
-		return this.http.get<ISuperHeroesSearchResults>(url);
+		return this.http.get<ISuperHero[]>(url);
 	}
 
-	get(id: number): Observable<ISuperHero> {
-		const url = `${environment.apiUrl}/${id}`;
+	getById(id: number): Observable<ISuperHero> {
+		const url = `${environment.apiUrl}/id/${id}.json`;
 
 		return this.http.get<ISuperHero>(url);
 	}

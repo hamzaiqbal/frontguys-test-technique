@@ -1,0 +1,26 @@
+{
+	"App": {
+		"Name": "SuperHero Finder"
+	},
+	"Common": {
+		"Or": "Or"
+	},
+	"SearchPage": {
+		"Title": "SuperHero Finder",
+		"SearchLabel": "Search:",
+		"SearchHelp": "ex: Batman",
+		"RandomSuperHero": "Call a random SuperHero"
+	},
+	"DetailPage": {
+		"Biography": {
+			"Fullname": "Fullname:",
+			"Aliases": "Aliases:"
+		},
+		"Powerstats": {
+
+		},
+		"Appearance": {
+
+		}
+	}
+}

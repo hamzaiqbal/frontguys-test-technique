@@ -2,15 +2,17 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { SuperheroesSearchPageComponent } from './pages/superheroes-search-page/superheroes-search-page.component';
-import { SuperheroresSearchFormComponent } from './components/superherores-search-form/superherores-search-form.component';
+import { SuperheroesSearchFormComponent } from './components/superheroes-search-form/superheroes-search-form.component';
+import { SharedModule } from 'src/app/shared-module/shared.module';
 
 
 
 @NgModule({
-	declarations: [SuperheroesSearchPageComponent, SuperheroresSearchFormComponent],
+	declarations: [SuperheroesSearchPageComponent, SuperheroesSearchFormComponent],
 	imports: [
 		CommonModule,
 		RouterModule,
+		SharedModule
 	]
 })
 export class SuperHeroesModule { }
