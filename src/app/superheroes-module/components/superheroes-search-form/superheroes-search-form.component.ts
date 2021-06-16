@@ -23,12 +23,13 @@ export class SuperheroesSearchFormComponent implements OnInit {
 		return superHero.id;
 	}
 
-	onSelect(superHero: ISuperHero): void {
-		this.selectSuperHero.emit(superHero);
+	onSelect(): void {
+		this.selectSuperHero.emit(this.currentSuperHero);
 	}
 
-	onRandomSearch(): void {
+	onRandomSelect(): void {
 		const random = Math.floor(Math.random() * this.superHeroesCount);
-		this.onSelect(this.superHeroes[random]);
+		this.currentSuperHero = this.superHeroes[random];
+		this.onSelect();
 	}
 }

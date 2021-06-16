@@ -5,13 +5,14 @@
 	"Common": {
 		"Or": "Or",
 		"NoResultFound": "No result found",
+		"Go": "Go!",
 		"Close": "Close"
 	},
 	"SearchPage": {
 		"Title": "SuperHero Finder",
-		"SearchLabel": "Search for a SuperHero:",
+		"SearchLabel": "Search for a SuperHero",
 		"SearchHelp": "ex: Batman",
-		"RandomSuperHero": "Call a random SuperHero",
+		"RandomSuperHero": "Call a random SuperHero!",
 		"Loading": "Loading of SuperHeroes database",
 		"Error": "Something went wrong with the loading of SuperHeroes database"
 	},

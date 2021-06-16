@@ -29,9 +29,8 @@ strong
 
 h1, h2, h3, h4, h5, h6
 {
-	font-family: $heading-font-family;
+	@include text-brand;
 	line-height: $heading-line-height;
-	letter-spacing: $heading-letter-spacing;
 }
 
 h1
@@ -83,10 +82,14 @@ h6
 
 .panel
 {
+	@include text-brand;
+	font-size: $font-size-lg;
 	background: $secondary;
+	color: $white;
 	border: $border;
 	box-shadow: $box-shadow;
 	padding: $spacer;
+	text-align: center;
 }
 
 /**
@@ -99,3 +102,97 @@ h6
 	text-align: center;
 }
 
+/**
+ * Buttons
+ */
+.btn
+{
+	@include btn-reset;
+	@include text-brand;
+	border: $border;
+	box-shadow: $box-shadow-sm;
+	font-size: $font-size-md;
+	padding: 10px;
+	transition: $transition-base;
+
+	&[disabled]
+	{
+		opacity: .7;
+		cursor: not-allowed;
+	}
+
+	&:active
+	{
+		transform: translate($spacer-xs, $spacer-xs);
+		box-shadow: $box-shadow-none;
+	}
+
+	&-primary
+	{
+		background: $primary;
+		color: $black;
+
+		&:hover,
+		&:focus
+		{
+			background: $primary-light;
+		}
+	}
+}
+
+
+/**
+ * Forms
+ */
+.form-label
+{
+	display: block;
+	margin: 0 0 $spacer-xs;
+}
+
+.form-input
+{
+	flex: 1;
+
+	&-group
+	{
+		display: flex;
+		align-items: center;
+
+		.btn
+		{
+			flex-grow: 0;
+			flex-shrink: 0;
+			margin: 0 0 0 $spacer;
+		}
+	}
+}
+
+// Some <ng-select> overrides
+// Need to use the same selectors in order to have the same specificity
+body .ng-select
+{
+	font-family: $font-family-base;
+	font-size: $font-size-md;
+	text-align: left;
+
+	.ng-select-container,
+	.ng-dropdown-panel
+	{
+		border: $border;
+	}
+
+	&.ng-select-single .ng-select-container .ng-value-container .ng-input
+	{
+		top: 12px;
+	}
+}
+
+/**
+ * Search block
+ */
+.or-separator
+{
+	margin: $spacer-sm 0 $spacer-xs;
+	text-align: center;
+}

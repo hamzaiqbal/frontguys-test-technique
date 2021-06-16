@@ -1,6 +1,6 @@
 <h1 translate="SearchPage.Title" class="main-title"></h1>
 
-<div class="panel" *ngIf="isLoaded">
+<ng-container *ngIf="isLoaded">
 	<superheroes-search-form
 		[superHeroes]="superHeroes"
 		[currentSuperHero]="currentSuperHero"
@@ -11,7 +11,7 @@
 		[currentSuperHero]="currentSuperHero"
 		(close)="onResetSuperHero()">
 	</superhero-detail>
-</div>
+</ng-container>
 
 <div class="panel" *ngIf="!isLoaded">
 	<p *ngIf="isLoading" translate="SearchPage.Loading"></p>
