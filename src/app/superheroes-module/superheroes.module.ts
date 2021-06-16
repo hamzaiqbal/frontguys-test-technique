@@ -6,17 +6,20 @@ import { SuperheroesSearchPageComponent } from './pages/superheroes-search-page/
 import { SuperheroesSearchFormComponent } from './components/superheroes-search-form/superheroes-search-form.component';
 import { SharedModule } from 'src/app/shared-module/shared.module';
 import { NgSelectModule } from '@ng-select/ng-select';
-
+import { SuperheroDetailComponent } from './components/superhero-detail/superhero-detail.component';
+import { ChartsModule } from 'ng2-charts';
+import { SuperheroPowerstatsComponent } from './components/superhero-powerstats/superhero-powerstats.component';
 
 
 @NgModule({
-	declarations: [SuperheroesSearchPageComponent, SuperheroesSearchFormComponent],
+	declarations: [SuperheroesSearchPageComponent, SuperheroesSearchFormComponent, SuperheroDetailComponent, SuperheroPowerstatsComponent],
 	imports: [
 		CommonModule,
 		RouterModule,
 		FormsModule,
 		SharedModule,
-		NgSelectModule
+		NgSelectModule,
+		ChartsModule
 	]
 })
 export class SuperHeroesModule { }

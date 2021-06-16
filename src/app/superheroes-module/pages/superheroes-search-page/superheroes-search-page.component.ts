@@ -38,4 +38,8 @@ export class SuperheroesSearchPageComponent implements OnInit {
 		this.currentSuperHero = superHero;
 	}
 
+	onResetSuperHero(): void {
+		this.currentSuperHero = null;
+	}
+
 }

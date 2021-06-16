@@ -1,0 +1,14 @@
+<button type="button" (click)="onClose()" translate="Common.Close"></button>
+
+<div *ngIf="!!currentSuperHero">
+	<h2>{{ currentSuperHero.name }}</h2>
+
+	<figure>
+		<img src="{{ currentSuperHero.images.md }}" alt="">
+	</figure>
+
+
+	<superhero-powerstats [powerstats]="currentSuperHero.powerstats">
+	</superhero-powerstats>
+</div>
+

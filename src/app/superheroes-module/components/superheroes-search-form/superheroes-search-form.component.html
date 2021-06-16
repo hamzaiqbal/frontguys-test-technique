@@ -1,12 +1,13 @@
 <div class="form-group">
 	<label translate="SearchPage.SearchLabel" for="search-field"></label>
 
-	<ng-select	[ngModel]="currentSuperHero"
-				(change)="onSelect($event)"
-				[trackByFn]="trackByFn"
-				labelForId="search-field"
-				placeholder="{{ 'SearchPage.SearchHelp' | translate }}"
-				notFoundText="{{ 'Common.NoResultFound' | translate }}">
+	<ng-select
+		[ngModel]="currentSuperHero"
+		(change)="onSelect($event)"
+		[trackByFn]="trackByFn"
+		labelForId="search-field"
+		placeholder="{{ 'SearchPage.SearchHelp' | translate }}"
+		notFoundText="{{ 'Common.NoResultFound' | translate }}">
 		<ng-option *ngFor="let superHero of superHeroes" [value]="superHero">
 			{{ superHero.name }} <em *ngIf="superHero.biography?.fullName">({{ superHero.biography?.fullName }})</em>
 		</ng-option>

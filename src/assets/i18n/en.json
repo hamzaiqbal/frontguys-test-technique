@@ -4,7 +4,8 @@
 	},
 	"Common": {
 		"Or": "Or",
-		"NoResultFound": "No result found"
+		"NoResultFound": "No result found",
+		"Close": "Close"
 	},
 	"SearchPage": {
 		"Title": "SuperHero Finder",
@@ -20,7 +21,12 @@
 			"Aliases": "Aliases:"
 		},
 		"Powerstats": {
-
+			"intelligence": "Intelligence",
+			"strength": "Strength",
+			"speed": "Speed",
+			"durability": "Durability",
+			"power": "Power",
+			"combat": "Combat"
 		},
 		"Appearance": {
 
