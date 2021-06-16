@@ -9,7 +9,7 @@ import { TranslateModule } from '@ngx-translate/core';
 		CommonModule
 	],
 	exports: [
-		TranslateModule
+		TranslateModule,
 	]
 })
 export class SharedModule { }

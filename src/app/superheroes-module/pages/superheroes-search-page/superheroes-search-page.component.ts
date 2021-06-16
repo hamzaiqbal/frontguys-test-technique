@@ -1,7 +1,5 @@
-import { ISuperHero } from './../../models/superhero.model';
 import { Component, OnInit } from '@angular/core';
-import { AppConstants } from 'src/app/app.constants';
-import { randomIntegerInRange } from 'src/app/shared-module/functions';
+import { ISuperHero } from 'src/app/superheroes-module/models/superhero.model';
 import { SuperHeroesService } from 'src/app/superheroes-module/services/superheros.service';
 
 @Component({
@@ -10,12 +8,9 @@ import { SuperHeroesService } from 'src/app/superheroes-module/services/superher
 })
 export class SuperheroesSearchPageComponent implements OnInit {
 	superHeroes: ISuperHero[] = [];
+	currentSuperHero: ISuperHero;
 
 	constructor(private superHeroesService: SuperHeroesService) { }
-
-	get superHeroesCount(): number {
-		return this.superHeroes.length;
-	}
 
 	ngOnInit(): void {
 		this.superHeroesService
@@ -23,9 +18,8 @@ export class SuperheroesSearchPageComponent implements OnInit {
 			.subscribe(superHeroes => this.superHeroes = superHeroes);
 	}
 
-	onRandomSearch(): void {
-		const random = Math.floor(Math.random() * this.superHeroesCount);
-		const randomHero = this.superHeroes[random];
+	onSelectSuperHero(superHero: ISuperHero): void {
+		this.currentSuperHero = superHero;
 	}
 
 }

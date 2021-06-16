@@ -1,5 +1,10 @@
 <h1 translate="SearchPage.Title"></h1>
 
-<superheroes-search-form (randomSuperHero)="onRandomSearch()">
-
+<superheroes-search-form
+	[superHeroes]="superHeroes"
+	[currentSuperHero]="currentSuperHero"
+	(selectSuperHero)="onSelectSuperHero($event)">
 </superheroes-search-form>
+
+
+{{ currentSuperHero?.id }}

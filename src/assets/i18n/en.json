@@ -3,7 +3,8 @@
 		"Name": "SuperHero Finder"
 	},
 	"Common": {
-		"Or": "Or"
+		"Or": "Or",
+		"NoResultFound": "No result found"
 	},
 	"SearchPage": {
 		"Title": "SuperHero Finder",

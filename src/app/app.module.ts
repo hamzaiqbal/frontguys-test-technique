@@ -7,6 +7,9 @@ import { SharedModule } from 'src/app/shared-module/shared.module';
 import { SuperHeroesModule } from 'src/app/superheroes-module/superheroes.module';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { NgSelectModule } from '@ng-select/ng-select';
+import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
 
 export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
@@ -20,8 +23,11 @@ export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
 		BrowserModule,
 		AppRoutingModule,
 		HttpClientModule,
+		CommonModule,
+		FormsModule,
 		SharedModule,
 		SuperHeroesModule,
+		NgSelectModule,
 		TranslateModule.forRoot({
 			defaultLanguage: 'en',
 			loader: {
@@ -29,7 +35,7 @@ export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
 				useFactory: HttpLoaderFactory,
 				deps: [HttpClient]
 			}
-		})
+		}),
 	],
 	providers: [],
 	bootstrap: [AppComponent]
