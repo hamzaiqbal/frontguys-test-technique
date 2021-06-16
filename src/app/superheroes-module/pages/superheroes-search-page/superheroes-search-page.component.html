@@ -1,10 +1,12 @@
 <h1 translate="SearchPage.Title"></h1>
 
-<superheroes-search-form
-	[superHeroes]="superHeroes"
-	[currentSuperHero]="currentSuperHero"
-	(selectSuperHero)="onSelectSuperHero($event)">
-</superheroes-search-form>
+<ng-container *ngIf="isLoaded">
+	<superheroes-search-form
+		[superHeroes]="superHeroes"
+		[currentSuperHero]="currentSuperHero"
+		(selectSuperHero)="onSelectSuperHero($event)">
+	</superheroes-search-form>
+</ng-container>
 
-
-{{ currentSuperHero?.id }}
+<p *ngIf="isLoading" translate="SearchPage.Loading"></p>
+<p *ngIf="hasError" translate="SearchPage.Error"></p>

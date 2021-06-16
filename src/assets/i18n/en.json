@@ -10,7 +10,9 @@
 		"Title": "SuperHero Finder",
 		"SearchLabel": "Search:",
 		"SearchHelp": "ex: Batman",
-		"RandomSuperHero": "Call a random SuperHero"
+		"RandomSuperHero": "Call a random SuperHero",
+		"Loading": "Loading of SuperHeroes database",
+		"Error": "Something went wrong with the loading of SuperHeroes database"
 	},
 	"DetailPage": {
 		"Biography": {
