@@ -1,0 +1,14 @@
+/**
+ * Text effects
+ */
+@mixin text-outline($color: $black, $width: 0.02em)
+{
+	text-shadow: 	($width) 0 $color,
+					0 ($width) $color,
+					($width) ($width) $color,
+					(-$width) 0 $color,
+					0 (-$width) $color,
+					(-$width) $width $color,
+					$width (-$width) $color,
+					(-$width) (-$width) $color;
+}

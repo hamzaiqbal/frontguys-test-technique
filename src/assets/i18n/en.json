@@ -9,7 +9,7 @@
 	},
 	"SearchPage": {
 		"Title": "SuperHero Finder",
-		"SearchLabel": "Search:",
+		"SearchLabel": "Search for a SuperHero:",
 		"SearchHelp": "ex: Batman",
 		"RandomSuperHero": "Call a random SuperHero",
 		"Loading": "Loading of SuperHeroes database",

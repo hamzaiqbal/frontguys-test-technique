@@ -1,0 +1,28 @@
+/**
+ * Objects
+ */
+@function extend($obj, $ext-obj) {
+	@return map-merge($obj, $ext-obj);
+}
+
+/**
+ * Units
+ */
+@function strip-unit($number) {
+	@if type-of($number) == "number" and not unitless($number) {
+		@return $number / ($number * 0 + 1);
+	}
+
+	@return $number;
+}
+
+$font-size-base-px: 16px !default;
+
+@function px-to-rem($target, $base: $font-size-base-px) {
+	@return (strip-unit($target) / strip-unit($base)) * 1rem;
+}
+
+@function ratio-to-percentage($ratio: 1) {
+	@return #{($ratio * 100) + "%"};
+}
+

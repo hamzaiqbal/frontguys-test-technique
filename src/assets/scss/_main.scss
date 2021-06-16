@@ -1,0 +1,101 @@
+/**
+ * Generic elements
+ */
+*, :before, :after
+{
+	box-sizing: border-box;
+}
+
+html
+{
+	font-family: $font-family-base;
+	line-height: $line-height-base;
+}
+
+body
+{
+	background: $body-bg url('/assets/images/bg_body.jpg') 50% 50% no-repeat;
+	background-size: cover;
+	color: $body-color;
+	padding: $spacer-lg $spacer $spacer;
+	min-height: 100vh;
+	overflow-x: hidden;
+}
+
+strong
+{
+	font-weight: $font-weight-bold;
+}
+
+h1, h2, h3, h4, h5, h6
+{
+	font-family: $heading-font-family;
+	line-height: $heading-line-height;
+	letter-spacing: $heading-letter-spacing;
+}
+
+h1
+{
+	font-size: $h1-font-size;
+	margin: $h1-margin;
+}
+
+h2
+{
+	font-size: $h2-font-size;
+	margin: $h2-margin;
+}
+
+h3
+{
+	font-size: $h3-font-size;
+	margin: $h3-margin;
+}
+
+h4
+{
+	font-size: $h4-font-size;
+	margin: $h4-margin;
+}
+
+h5
+{
+	font-size: $h5-font-size;
+	margin: $h5-margin;
+}
+
+h6
+{
+	font-size: $h6-font-size;
+	margin: $h6-margin;
+}
+
+
+/**
+ * Layout / Common blocks
+ */
+#app
+{
+
+	max-width: 800px;
+	margin: 0 auto;
+}
+
+.panel
+{
+	background: $secondary;
+	border: $border;
+	box-shadow: $box-shadow;
+	padding: $spacer;
+}
+
+/**
+ * Main Title
+ */
+.main-title
+{
+	@include text-outline;
+	color: $primary;
+	text-align: center;
+}
+

@@ -1,19 +1,19 @@
-<h1 translate="SearchPage.Title"></h1>
+<h1 translate="SearchPage.Title" class="main-title"></h1>
 
-<p *ngIf="isLoading" translate="SearchPage.Loading"></p>
-<p *ngIf="hasError" translate="SearchPage.Error"></p>
-
-<ng-container *ngIf="isLoaded">
+<div class="panel" *ngIf="isLoaded">
 	<superheroes-search-form
 		[superHeroes]="superHeroes"
 		[currentSuperHero]="currentSuperHero"
 		(selectSuperHero)="onSelectSuperHero($event)">
 	</superheroes-search-form>
 
-
 	<superhero-detail
 		[currentSuperHero]="currentSuperHero"
 		(close)="onResetSuperHero()">
 	</superhero-detail>
-</ng-container>
+</div>
 
+<div class="panel" *ngIf="!isLoaded">
+	<p *ngIf="isLoading" translate="SearchPage.Loading"></p>
+	<p *ngIf="hasError" translate="SearchPage.Error"></p>
+</div>

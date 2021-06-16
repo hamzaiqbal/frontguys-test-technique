@@ -1,0 +1,74 @@
+// Typo
+$font-family-base: 				'Roboto', sans-serif !default;
+$heading-font-family: 			'Bangers', $font-family-base !default;
+
+$font-weight-normal: 			400 !default;
+$font-weight-bold: 				500 !default;
+
+$font-size-base: 				1rem !default;
+$line-height-base: 				1.5 !default;
+$heading-line-height: 			1.1 !default;
+$heading-letter-spacing: 		0.05em !default;
+
+
+$font-size-xl: 					px-to-rem(100px) !default;
+$font-size-lg: 					px-to-rem(26px) !default;
+$font-size-md: 					px-to-rem(20px) !default;
+$font-size-sm: 					px-to-rem(14px) !default;
+$font-size-xs: 					px-to-rem(12px) !default;
+
+$h1-font-size: 					$font-size-xl !default;
+$h2-font-size: 					$font-size-lg !default;
+$h3-font-size: 					$font-size-md !default;
+$h4-font-size: 					$font-size-base !default;
+$h5-font-size: 					$font-size-sm !default;
+$h6-font-size: 					$font-size-xs !default;
+
+$h1-margin: 					0 0 .5em !default;
+$h2-margin: 					0 0 .5em !default;
+$h3-margin: 					.5em 0 1.5em !default;
+$h4-margin: 					.5em 0 1.5em !default;
+$h5-margin: 					.5em 0 1.5em !default;
+$h6-margin: 					.5em 0 1.5em !default;
+
+
+// Colors
+$white:							#fff !default;
+$black:							#000 !default;
+$gray:							#555 !default;
+$yellow: 						#ffdB0d !default;
+$blue: 							#199be2 !default;
+
+$body-bg: 						$white !default;
+$body-color: 					$gray !default;
+$primary: 						$yellow !default;
+$secondary: 					$blue !default;
+
+
+// Spacers
+$spacer: 						30px !default;
+$spacer-sm: 					$spacer * .5 !default;
+$spacer-md: 					$spacer * 2 !default;
+$spacer-lg: 					$spacer * 3 !default;
+$spacer-xl: 					$spacer * 4 !default;
+
+
+// Effects / Animations
+$border: 						3px solid $black !default;
+$box-shadow: 					$spacer-sm $spacer-sm rgba($black, .5) !default;
+
+
+// <ng-select> overrides
+$ng-select-highlight:			#007eff !default;
+$ng-select-primary-text:		#333 !default;
+$ng-select-disabled-text:		#f9f9f9 !default;
+$ng-select-border:				#ccc !default;
+$ng-select-border-radius:		4px !default;
+$ng-select-bg:					#ffffff !default;
+$ng-select-selected:			lighten($ng-select-highlight, 46) !default;
+$ng-select-marked:				lighten($ng-select-highlight, 48) !default;
+$ng-select-box-shadow:			inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 0 3px rgba(0, 126, 255, 0.1) !default;
+$ng-select-placeholder:			lighten($ng-select-primary-text, 40) !default;
+$ng-select-height:				50px !default;
+$ng-select-value-padding-left:	10px !default;
+$ng-select-value-font-size:		$font-size-lg !default;

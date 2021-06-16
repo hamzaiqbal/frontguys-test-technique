@@ -1,0 +1,10 @@
+@import "https://fonts.googleapis.com/css2?family=Bangers&family=Roboto:ital,wght@0,400;0,500;1,400;1,500&display=swap";
+@import "functions";
+@import "vars";
+@import "mixins";
+@import "~normalize.css/normalize.css";
+@import "main";
+
+// <ng-select>
+@import "~@ng-select/ng-select/scss/ng-select.component";
+@import "~@ng-select/ng-select/scss/default.theme";
