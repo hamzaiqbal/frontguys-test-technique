@@ -5,15 +5,20 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { NgSelectModule } from '@ng-select/ng-select';
 import { SuperheroesSearchPageComponent } from 'src/app/superheroes-module/pages';
-import { SuperheroDetailComponent, SuperheroesSearchFormComponent, SuperheroPowerstatsChartBarComponent } from 'src/app/superheroes-module/components';
-
+import {
+	SuperheroDetailComponent,
+	SuperheroesSearchFormComponent,
+	SuperheroPowerstatsChartBarComponent,
+	SuperheroInfoListItemComponent
+} from 'src/app/superheroes-module/components';
 
 @NgModule({
 	declarations: [
 		SuperheroesSearchPageComponent,
 		SuperheroesSearchFormComponent,
 		SuperheroDetailComponent,
-		SuperheroPowerstatsChartBarComponent
+		SuperheroPowerstatsChartBarComponent,
+		SuperheroInfoListItemComponent
 	],
 	imports: [
 		CommonModule,

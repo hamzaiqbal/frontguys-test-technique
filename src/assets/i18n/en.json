@@ -11,15 +11,28 @@
 	"SearchPage": {
 		"Title": "SuperHero Finder",
 		"SearchLabel": "Search for a SuperHero",
-		"SearchHelp": "ex: Batman",
-		"RandomSuperHero": "Call a random SuperHero!",
+		"SearchHelp": "Type something (ex: Batman)",
+		"RandomSuperHero": "Find a random SuperHero!",
 		"Loading": "Loading of SuperHeroes database",
 		"Error": "Something went wrong with the loading of SuperHeroes database"
 	},
 	"DetailPage": {
 		"Biography": {
+			"Title": "Biography",
 			"Fullname": "Fullname:",
-			"Aliases": "Aliases:"
+			"AlterEgos": "Alter egos:",
+			"Aliases": "Aliases:",
+			"PlaceOfBirth": "Place of birth:",
+			"Alignment": "Alignment:"
+		},
+		"Appearance": {
+			"Title": "Appearance",
+			"Gender": "Gender:",
+			"Race": "Race:",
+			"Height": "Height:",
+			"Weight": "Weight:",
+			"EyeColor": "Eye color:",
+			"HairColor": "Hair color:"
 		},
 		"Powerstats": {
 			"Title": "Powerstats",
@@ -29,9 +42,6 @@
 			"Durability": "Durability",
 			"Power": "Power",
 			"Combat": "Combat"
-		},
-		"Appearance": {
-
 		}
 	}
 }

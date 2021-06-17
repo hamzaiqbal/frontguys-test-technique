@@ -1,6 +1,6 @@
 /**
  * Generic elements
- */
+ ****************************************/
 *, :before, :after
 {
 	box-sizing: border-box;
@@ -69,25 +69,50 @@ h6
 	margin: $h6-margin;
 }
 
+figure
+{
+	margin: 0;
+
+	img
+	{
+		display: block;
+	}
+}
+
+img
+{
+	max-width: 100%;
+}
+
 
 /**
  * Layout / Common blocks
- */
+ ****************************************/
 #app
 {
-
 	max-width: 800px;
 	margin: 0 auto;
 }
 
+.box-shadow
+{
+	box-shadow: $box-shadow;
+}
+
+.box-shadow-sm
+{
+	box-shadow: $box-shadow-sm;
+}
+
+
 .panel
 {
 	@include text-brand;
-	font-size: $font-size-lg;
+	@extend .box-shadow;
+	font-size: $font-size-md;
 	background: $secondary;
 	color: $white;
 	border: $border;
-	box-shadow: $box-shadow;
 	padding: $spacer;
 	text-align: center;
 }
@@ -117,21 +142,41 @@ h6
 
 	&-content
 	{
+		@extend .box-shadow;
 		background: $white;
 		border: $border;
-		box-shadow: $box-shadow;
-		max-width: 1000px;
+		width: 1000px;
+		max-width: 90vw;
 		max-height: 100vh;
 		overflow: auto;
 		padding: $spacer;
 		position: relative;
 		z-index: 4;
 	}
+
+	&-header
+	{
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		margin: 0 0 $spacer-sm;
+
+		.btn
+		{
+			margin: 0 0 0 $spacer;
+		}
+	}
+
+	&-title
+	{
+		flex: 1;
+		margin: 0;
+	}
 }
 
 /**
  * Main Title
- */
+ ****************************************/
 .main-title
 {
 	@include text-outline;
@@ -141,16 +186,18 @@ h6
 
 /**
  * Buttons
- */
+ ****************************************/
 .btn
 {
 	@include btn-reset;
 	@include text-brand;
+	@extend .box-shadow-sm;
 	border: $border;
-	box-shadow: $box-shadow-sm;
 	font-size: $font-size-md;
 	padding: 10px;
 	transition: $transition-base;
+	flex-shrink: 0;
+	flex-grow: 0;
 
 	&[disabled]
 	{
@@ -180,7 +227,12 @@ h6
 
 /**
  * Forms
- */
+ ****************************************/
+.form-group
+{
+	margin: 0 0 $spacer-sm;
+}
+
 .form-label
 {
 	display: block;
@@ -198,8 +250,6 @@ h6
 
 		.btn
 		{
-			flex-grow: 0;
-			flex-shrink: 0;
 			margin: 0 0 0 $spacer;
 		}
 	}
@@ -210,7 +260,7 @@ h6
 body .ng-select
 {
 	font-family: $font-family-base;
-	font-size: $font-size-md;
+	font-size: $ng-select-value-font-size;
 	text-align: left;
 
 	.ng-select-container,
@@ -225,20 +275,74 @@ body .ng-select
 	}
 }
 
+
 /**
- * Search Panel
- */
-.or-separator
+ * Lists
+ ****************************************/
+.info-list
 {
-	margin: $spacer-sm 0 $spacer-xs;
-	text-align: center;
+	list-style: none;
+	padding: 0;
+	margin: 0 0 $spacer;
+
+	&-item
+	{
+		display: flex;
+
+		& + &
+		{
+			margin-top: $spacer-xs;
+		}
+	}
+
+	&-label
+	{
+		font-weight: $font-weight-bold;
+		margin-right: $spacer-xs;
+		width: 120px;
+		flex-shrink: 0;
+		flex-grow: 0;
+	}
+
+	&-value
+	{
+		flex: 1;
+	}
 }
 
 
-/**
- * Detail Panel
- */
-.detail-panel
-{
 
+/**
+ * Super Hero Detail
+ ****************************************/
+.superhero
+{
+	&-identity
+	{
+		display: flex;
+		align-items: flex-start;
+	}
+
+	&-img
+	{
+		@extend .box-shadow-sm;
+		flex-grow: 0;
+	}
+
+	&-biography
+	{
+		flex: 1;
+	}
+
+	&-appearance
+	{
+		width: 250px;
+		margin: 0 $spacer;
+	}
+
+	&-powerstats
+	{
+		margin-top: $spacer;
+	}
 }
+

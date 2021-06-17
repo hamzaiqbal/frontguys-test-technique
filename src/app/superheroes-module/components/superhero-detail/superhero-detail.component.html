@@ -4,31 +4,117 @@
 
 	<div class="modal-content animated zoomIn faster">
 		<header class="modal-header">
-			<h2>{{ currentSuperHero.name }}</h2>
+			<h2 class="modal-title">{{ currentSuperHero.name }}</h2>
 			<button type="button" class="btn btn-primary" (click)="onClose()" translate="Common.Close"></button>
 		</header>
 
-		<figure>
-			<img src="{{ currentSuperHero.images.md }}" alt="">
-		</figure>
+		<div class="modal-body">
+
+			<div class="superhero-identity">
+				<figure class="superhero-img">
+					<img src="{{ currentSuperHero.images.sm }}" alt="">
+				</figure>
+
+				<div class="superhero-appearance">
+					<h3 translate="DetailPage.Appearance.Title"></h3>
+
+					<ul class="info-list">
+						<li superhero-info-list-item
+							class="info-list-item"
+							label="DetailPage.Appearance.Gender"
+							[value]="currentSuperHero.appearance.gender">
+						</li>
+
+						<li superhero-info-list-item
+							class="info-list-item"
+							label="DetailPage.Appearance.Race"
+							[value]="currentSuperHero.appearance.race">
+						</li>
+
+						<li superhero-info-list-item
+							class="info-list-item"
+							label="DetailPage.Appearance.Height"
+							[value]="currentSuperHero.appearance.height">
+						</li>
+
+						<li superhero-info-list-item
+							class="info-list-item"
+							label="DetailPage.Appearance.Weight"
+							[value]="currentSuperHero.appearance.weight">
+						</li>
+
+						<li superhero-info-list-item
+							class="info-list-item"
+							label="DetailPage.Appearance.EyeColor"
+							[value]="currentSuperHero.appearance.eyeColor">
+						</li>
+
+						<li superhero-info-list-item
+							class="info-list-item"
+							label="DetailPage.Appearance.HairColor"
+							[value]="currentSuperHero.appearance.hairColor">
+						</li>
+					</ul>
+				</div>
+
+				<div class="superhero-biography">
+					<h3 translate="DetailPage.Biography.Title"></h3>
+
+					<ul class="info-list">
+						<li superhero-info-list-item
+							class="info-list-item"
+							label="DetailPage.Biography.Fullname"
+							[value]="currentSuperHero.biography.fullName || currentSuperHero.name">
+						</li>
+
+						<li superhero-info-list-item
+							class="info-list-item"
+							label="DetailPage.Biography.AlterEgos"
+							[value]="currentSuperHero.biography.alterEgos">
+						</li>
+
+						<li superhero-info-list-item
+							class="info-list-item"
+							label="DetailPage.Biography.Aliases"
+							[value]="currentSuperHero.biography.aliases">
+						</li>
+
+						<li superhero-info-list-item
+							class="info-list-item"
+							label="DetailPage.Biography.PlaceOfBirth"
+							[value]="currentSuperHero.biography.placeOfBirth">
+						</li>
+
+						<li superhero-info-list-item
+							class="info-list-item"
+							label="DetailPage.Biography.Alignment"
+							[value]="currentSuperHero.biography.alignment">
+						</li>
+					</ul>
+				</div>
 
 
-		<div>
-			<h3 translate="DetailPage.Powerstats.Title"></h3>
+			</div>
 
-			<superhero-powerstats-chart-bar label="DetailPage.Powerstats.Intelligence" [value]="currentSuperHero.powerstats.intelligence">
-			</superhero-powerstats-chart-bar>
-			<superhero-powerstats-chart-bar label="DetailPage.Powerstats.Strength" [value]="currentSuperHero.powerstats.strength">
-			</superhero-powerstats-chart-bar>
-			<superhero-powerstats-chart-bar label="DetailPage.Powerstats.Speed" [value]="currentSuperHero.powerstats.speed">
-			</superhero-powerstats-chart-bar>
-			<superhero-powerstats-chart-bar label="DetailPage.Powerstats.Durability" [value]="currentSuperHero.powerstats.durability">
-			</superhero-powerstats-chart-bar>
-			<superhero-powerstats-chart-bar label="DetailPage.Powerstats.Power" [value]="currentSuperHero.powerstats.power">
-			</superhero-powerstats-chart-bar>
-			<superhero-powerstats-chart-bar label="DetailPage.Powerstats.Combat" [value]="currentSuperHero.powerstats.combat">
-			</superhero-powerstats-chart-bar>
+
+			<div class="superhero-powerstats">
+				<h3 translate="DetailPage.Powerstats.Title"></h3>
+
+				<superhero-powerstats-chart-bar label="DetailPage.Powerstats.Intelligence" [value]="currentSuperHero.powerstats.intelligence">
+				</superhero-powerstats-chart-bar>
+				<superhero-powerstats-chart-bar label="DetailPage.Powerstats.Strength" [value]="currentSuperHero.powerstats.strength">
+				</superhero-powerstats-chart-bar>
+				<superhero-powerstats-chart-bar label="DetailPage.Powerstats.Speed" [value]="currentSuperHero.powerstats.speed">
+				</superhero-powerstats-chart-bar>
+				<superhero-powerstats-chart-bar label="DetailPage.Powerstats.Durability" [value]="currentSuperHero.powerstats.durability">
+				</superhero-powerstats-chart-bar>
+				<superhero-powerstats-chart-bar label="DetailPage.Powerstats.Power" [value]="currentSuperHero.powerstats.power">
+				</superhero-powerstats-chart-bar>
+				<superhero-powerstats-chart-bar label="DetailPage.Powerstats.Combat" [value]="currentSuperHero.powerstats.combat">
+				</superhero-powerstats-chart-bar>
+			</div>
 		</div>
+
 	</div>
 </div>
 
