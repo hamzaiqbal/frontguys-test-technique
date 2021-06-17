@@ -1,32 +1,34 @@
-
-<div *ngIf="!!currentSuperHero">
-	<button type="button" class="btn btn-primary" (click)="onClose()" translate="Common.Close"></button>
-	<h2>{{ currentSuperHero.name }}</h2>
-
-	<figure>
-		<img src="{{ currentSuperHero.images.md }}" alt="">
-	</figure>
-
-
-	<div>
-		<h3 translate="DetailPage.Powerstats.Title"></h3>
-
-		<superhero-powerstats-chart-bar label="DetailPage.Powerstats.Intelligence" [value]="currentSuperHero.powerstats.intelligence">
-		</superhero-powerstats-chart-bar>
-		<superhero-powerstats-chart-bar label="DetailPage.Powerstats.Strength" [value]="currentSuperHero.powerstats.strength">
-		</superhero-powerstats-chart-bar>
-		<superhero-powerstats-chart-bar label="DetailPage.Powerstats.Speed" [value]="currentSuperHero.powerstats.speed">
-		</superhero-powerstats-chart-bar>
-		<superhero-powerstats-chart-bar label="DetailPage.Powerstats.Durability" [value]="currentSuperHero.powerstats.durability">
-		</superhero-powerstats-chart-bar>
-		<superhero-powerstats-chart-bar label="DetailPage.Powerstats.Power" [value]="currentSuperHero.powerstats.power">
-		</superhero-powerstats-chart-bar>
-		<superhero-powerstats-chart-bar label="DetailPage.Powerstats.Combat" [value]="currentSuperHero.powerstats.combat">
-		</superhero-powerstats-chart-bar>
+<div class="modal" *ngIf="!!currentSuperHero">
+	<div class="modal-backdrop animated fadeIn" (click)="onClose()">
 	</div>
 
+	<div class="modal-content animated zoomIn faster">
+		<header class="modal-header">
+			<h2>{{ currentSuperHero.name }}</h2>
+			<button type="button" class="btn btn-primary" (click)="onClose()" translate="Common.Close"></button>
+		</header>
 
-	<superhero-powerstats [powerstats]="currentSuperHero.powerstats">
-	</superhero-powerstats>
+		<figure>
+			<img src="{{ currentSuperHero.images.md }}" alt="">
+		</figure>
+
+
+		<div>
+			<h3 translate="DetailPage.Powerstats.Title"></h3>
+
+			<superhero-powerstats-chart-bar label="DetailPage.Powerstats.Intelligence" [value]="currentSuperHero.powerstats.intelligence">
+			</superhero-powerstats-chart-bar>
+			<superhero-powerstats-chart-bar label="DetailPage.Powerstats.Strength" [value]="currentSuperHero.powerstats.strength">
+			</superhero-powerstats-chart-bar>
+			<superhero-powerstats-chart-bar label="DetailPage.Powerstats.Speed" [value]="currentSuperHero.powerstats.speed">
+			</superhero-powerstats-chart-bar>
+			<superhero-powerstats-chart-bar label="DetailPage.Powerstats.Durability" [value]="currentSuperHero.powerstats.durability">
+			</superhero-powerstats-chart-bar>
+			<superhero-powerstats-chart-bar label="DetailPage.Powerstats.Power" [value]="currentSuperHero.powerstats.power">
+			</superhero-powerstats-chart-bar>
+			<superhero-powerstats-chart-bar label="DetailPage.Powerstats.Combat" [value]="currentSuperHero.powerstats.combat">
+			</superhero-powerstats-chart-bar>
+		</div>
+	</div>
 </div>
 

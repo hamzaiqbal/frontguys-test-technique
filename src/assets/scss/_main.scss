@@ -92,6 +92,43 @@ h6
 	text-align: center;
 }
 
+.modal
+{
+	&,
+	&-backdrop
+	{
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+	}
+
+	z-index: 2;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	&-backdrop
+	{
+		background: rgba($black, .7);
+		z-index: 3;
+	}
+
+	&-content
+	{
+		background: $white;
+		border: $border;
+		box-shadow: $box-shadow;
+		max-width: 1000px;
+		max-height: 100vh;
+		overflow: auto;
+		padding: $spacer;
+		position: relative;
+		z-index: 4;
+	}
+}
+
 /**
  * Main Title
  */
@@ -189,10 +226,19 @@ body .ng-select
 }
 
 /**
- * Search block
+ * Search Panel
  */
 .or-separator
 {
 	margin: $spacer-sm 0 $spacer-xs;
 	text-align: center;
+}
+
+
+/**
+ * Detail Panel
+ */
+.detail-panel
+{
+
 }
