@@ -22,12 +22,13 @@
 			"Aliases": "Aliases:"
 		},
 		"Powerstats": {
-			"intelligence": "Intelligence",
-			"strength": "Strength",
-			"speed": "Speed",
-			"durability": "Durability",
-			"power": "Power",
-			"combat": "Combat"
+			"Title": "Powerstats",
+			"Intelligence": "Intelligence",
+			"Strength": "Strength",
+			"Speed": "Speed",
+			"Durability": "Durability",
+			"Power": "Power",
+			"Combat": "Combat"
 		},
 		"Appearance": {
 

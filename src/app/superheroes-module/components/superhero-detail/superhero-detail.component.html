@@ -8,6 +8,24 @@
 	</figure>
 
 
+	<div>
+		<h3 translate="DetailPage.Powerstats.Title"></h3>
+
+		<superhero-powerstats-chart-bar label="DetailPage.Powerstats.Intelligence" [value]="currentSuperHero.powerstats.intelligence">
+		</superhero-powerstats-chart-bar>
+		<superhero-powerstats-chart-bar label="DetailPage.Powerstats.Strength" [value]="currentSuperHero.powerstats.strength">
+		</superhero-powerstats-chart-bar>
+		<superhero-powerstats-chart-bar label="DetailPage.Powerstats.Speed" [value]="currentSuperHero.powerstats.speed">
+		</superhero-powerstats-chart-bar>
+		<superhero-powerstats-chart-bar label="DetailPage.Powerstats.Durability" [value]="currentSuperHero.powerstats.durability">
+		</superhero-powerstats-chart-bar>
+		<superhero-powerstats-chart-bar label="DetailPage.Powerstats.Power" [value]="currentSuperHero.powerstats.power">
+		</superhero-powerstats-chart-bar>
+		<superhero-powerstats-chart-bar label="DetailPage.Powerstats.Combat" [value]="currentSuperHero.powerstats.combat">
+		</superhero-powerstats-chart-bar>
+	</div>
+
+
 	<superhero-powerstats [powerstats]="currentSuperHero.powerstats">
 	</superhero-powerstats>
 </div>
