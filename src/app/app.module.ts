@@ -3,7 +3,6 @@ import { NgModule } from '@angular/core';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { SharedModule } from 'src/app/shared-module/shared.module';
 import { SuperHeroesModule } from 'src/app/superheroes-module/superheroes.module';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
@@ -25,7 +24,6 @@ export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
 		HttpClientModule,
 		CommonModule,
 		FormsModule,
-		SharedModule,
 		SuperHeroesModule,
 		NgSelectModule,
 		TranslateModule.forRoot({

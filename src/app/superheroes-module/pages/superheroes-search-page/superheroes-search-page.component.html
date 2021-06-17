@@ -1,4 +1,4 @@
-<h1 translate="SearchPage.Title" class="main-title"></h1>
+<h1 translate="SearchPage.Title" class="main-title animated lightSpeedInLeft"></h1>
 
 <ng-container *ngIf="isLoaded">
 	<superheroes-search-form
@@ -13,7 +13,9 @@
 	</superhero-detail>
 </ng-container>
 
-<div class="panel" *ngIf="!isLoaded">
-	<p *ngIf="isLoading" translate="SearchPage.Loading"></p>
-	<p *ngIf="hasError" translate="SearchPage.Error"></p>
+<div class="panel" *ngIf="isLoading" translate="SearchPage.Loading">
 </div>
+
+<div class="panel animated tada" *ngIf="hasError" translate="SearchPage.Error">
+</div>
+
