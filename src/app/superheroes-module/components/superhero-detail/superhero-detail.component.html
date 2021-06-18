@@ -100,18 +100,23 @@
 			<div class="superhero-powerstats">
 				<h3 translate="DetailPage.Powerstats.Title"></h3>
 
-				<superhero-powerstats-chart-bar label="DetailPage.Powerstats.Intelligence" [value]="currentSuperHero.powerstats.intelligence">
-				</superhero-powerstats-chart-bar>
-				<superhero-powerstats-chart-bar label="DetailPage.Powerstats.Strength" [value]="currentSuperHero.powerstats.strength">
-				</superhero-powerstats-chart-bar>
-				<superhero-powerstats-chart-bar label="DetailPage.Powerstats.Speed" [value]="currentSuperHero.powerstats.speed">
-				</superhero-powerstats-chart-bar>
-				<superhero-powerstats-chart-bar label="DetailPage.Powerstats.Durability" [value]="currentSuperHero.powerstats.durability">
-				</superhero-powerstats-chart-bar>
-				<superhero-powerstats-chart-bar label="DetailPage.Powerstats.Power" [value]="currentSuperHero.powerstats.power">
-				</superhero-powerstats-chart-bar>
-				<superhero-powerstats-chart-bar label="DetailPage.Powerstats.Combat" [value]="currentSuperHero.powerstats.combat">
-				</superhero-powerstats-chart-bar>
+				<div class="cols">
+					<superhero-powerstats-chart-bar class="col" label="DetailPage.Powerstats.Intelligence" [value]="currentSuperHero.powerstats.intelligence">
+					</superhero-powerstats-chart-bar>
+					<superhero-powerstats-chart-bar class="col" label="DetailPage.Powerstats.Strength" [value]="currentSuperHero.powerstats.strength">
+					</superhero-powerstats-chart-bar>
+					<superhero-powerstats-chart-bar class="col" label="DetailPage.Powerstats.Speed" [value]="currentSuperHero.powerstats.speed">
+					</superhero-powerstats-chart-bar>
+				</div>
+
+				<div class="cols">
+					<superhero-powerstats-chart-bar class="col" label="DetailPage.Powerstats.Durability" [value]="currentSuperHero.powerstats.durability">
+					</superhero-powerstats-chart-bar>
+					<superhero-powerstats-chart-bar class="col" label="DetailPage.Powerstats.Power" [value]="currentSuperHero.powerstats.power">
+					</superhero-powerstats-chart-bar>
+					<superhero-powerstats-chart-bar class="col" label="DetailPage.Powerstats.Combat" [value]="currentSuperHero.powerstats.combat">
+					</superhero-powerstats-chart-bar>
+				</div>
 			</div>
 		</div>
 

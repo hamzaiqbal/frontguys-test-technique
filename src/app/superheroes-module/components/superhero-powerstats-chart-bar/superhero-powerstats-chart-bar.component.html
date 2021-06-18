@@ -1,9 +1,11 @@
 <div class="bar-chart">
-	<div class="bar-chart-label">{{ label | translate }}</div>
-
-	<div class="bar-chart-data">
-		<div class="bar-chart-value" [attr.style]="{ width: value + '%' }"></div>
+	<div class="bar-chart-legend">
+		<span class="bar-chart-label">{{ label | translate }}</span>
+		<span class="bar-chart-score">{{ value }} / 100</span>
 	</div>
 
-	<div class="bar-chart-score">{{ value }} / 100</div>
+	<div class="bar-chart-data">
+		<div class="bar-chart-value {{ rangeClass }}" [style.width]="value + '%'"></div>
+	</div>
+
 </div>

@@ -145,7 +145,7 @@ img
 		@extend .box-shadow;
 		background: $white;
 		border: $border;
-		width: 1000px;
+		width: $content-max-width;
 		max-width: 90vw;
 		max-height: 100vh;
 		overflow: auto;
@@ -313,36 +313,106 @@ body .ng-select
 
 
 /**
+ * Columns
+ ****************************************/
+.col
+{
+	@media screen and (min-width: $content-max-width)
+	{
+		flex: 1;
+		padding: 0 $spacer-sm;
+
+		&s
+		{
+			display: flex;
+			margin: 0 (-$spacer-sm);
+		}
+	}
+}
+
+
+/**
+ * Charts
+ ****************************************/
+.bar-chart
+{
+	margin: 0 0 $spacer-sm;
+
+	&-legend
+	{
+		display: flex;
+		justify-content: space-between;
+		font-weight: $font-weight-bold;
+		margin-bottom: $spacer-xs;
+	}
+
+	&-data
+	{
+		background: rgba($black, .2);
+	}
+
+	&-value
+	{
+		background: $primary;
+		height: $spacer-xs;
+
+		&.low { background: $red; }
+		&.average { background: $orange; }
+		&.high { background: $green; }
+	}
+}
+
+
+/**
  * Super Hero Detail
  ****************************************/
 .superhero
 {
-	&-identity
-	{
-		display: flex;
-		align-items: flex-start;
-	}
-
 	&-img
 	{
 		@extend .box-shadow-sm;
+		border: $border;
 		flex-grow: 0;
+		flex-shrink: 0;
 	}
 
-	&-biography
-	{
-		flex: 1;
-	}
-
-	&-appearance
-	{
-		width: 250px;
-		margin: 0 $spacer;
-	}
-
+	&-biography,
+	&-appearance,
 	&-powerstats
 	{
 		margin-top: $spacer;
+	}
+
+	@media screen and (max-width: $content-max-width - 1px)
+	{
+		&-img
+		{
+			img
+			{
+				width: 100%;
+			}
+		}
+	}
+
+	@media screen and (min-width: $content-max-width)
+	{
+		&-identity
+		{
+			display: flex;
+			align-items: flex-start;
+		}
+
+		&-biography
+		{
+			margin: 0;
+			flex: 1;
+		}
+
+		&-appearance
+		{
+			width: 250px;
+			margin: 0 $spacer;
+		}
 	}
 }
 

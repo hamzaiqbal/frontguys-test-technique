@@ -6,11 +6,13 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class SuperheroPowerstatsChartBarComponent implements OnInit {
 	@Input() label: string;
-	@Input() value: number;
+	@Input() value: number = 0;
+
+	rangeClass: 'high' | 'average' | 'low' = 'low';
 
 	constructor() { }
 
 	ngOnInit(): void {
+		this.rangeClass = this.value > 60 ? 'high' : (this.value > 30 ? 'average' : 'low');
 	}
-
 }

@@ -10,7 +10,6 @@ $line-height-base: 				1.5 !default;
 $heading-line-height: 			1.1 !default;
 $brand-letter-spacing: 			0.05em !default;
 
-
 $font-size-xl: 					px-to-rem(40px) !default;
 $font-size-lg: 					px-to-rem(32px) !default;
 $font-size-md: 					px-to-rem(24px) !default;
@@ -39,6 +38,9 @@ $gray:							#555 !default;
 $gray-light:					#777 !default;
 $yellow: 						#ffdB0d !default;
 $blue: 							#199be2 !default;
+$red: 							#dc3545 !default;
+$orange:						#fd7e14 !default;
+$green: 						#28a745 !default;
 
 $body-bg: 						$white !default;
 $body-color: 					$black !default;
@@ -56,9 +58,14 @@ $spacer-md: 					$spacer * 2 !default;
 $spacer-lg: 					$spacer * 3 !default;
 $spacer-xl: 					$spacer * 4 !default;
 
+$content-max-width: 			1000px !default;
+
+
 
 // Effects / Animations
 $border: 						3px solid $black !default;
+$border-sm: 					1px solid $black !default;
+
 $box-shadow: 					$spacer-sm $spacer-sm rgba($black, .5) !default;
 $box-shadow-sm: 				$spacer-xs $spacer-xs rgba($black, .5) !default;
 $box-shadow-none: 				0 0 rgba($black, .5) !default;
