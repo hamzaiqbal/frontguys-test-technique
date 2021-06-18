@@ -1,5 +1,5 @@
 // Fonts
-@import "https://fonts.googleapis.com/css2?family=Bangers&family=Roboto:ital,wght@0,400;0,500;1,400;1,500&display=swap";
+@import url("https://fonts.googleapis.com/css2?family=Bangers&family=Roboto:ital,wght@0,400;0,500;1,400;1,500&display=swap");
 
 // Normalize
 @import "~normalize.css/normalize.css";
@@ -15,10 +15,10 @@
 @import "~@ng-select/ng-select/scss/default.theme";
 
 // Animate.css
-@import '~animate.css/source/_vars.css';
-@import '~animate.css/source/_base.css';
+@import "~animate.css/source/_vars.css";
+@import "~animate.css/source/_base.css";
 
-@import '~animate.css/source/attention_seekers/tada.css';
-@import '~animate.css/source/flippers/flipInX.css';
-@import '~animate.css/source/fading_entrances/fadeIn.css';
-@import '~animate.css/source/zooming_entrances/zoomIn.css';
+@import "~animate.css/source/attention_seekers/tada.css";
+@import "~animate.css/source/flippers/flipInX.css";
+@import "~animate.css/source/fading_entrances/fadeIn.css";
+@import "~animate.css/source/zooming_entrances/zoomIn.css";
