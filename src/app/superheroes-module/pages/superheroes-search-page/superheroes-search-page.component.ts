@@ -19,13 +19,14 @@ export class SuperheroesSearchPageComponent implements OnInit {
 		return this.superHeroes.length > 0;
 	}
 
-	constructor(private superHeroesService: SuperHeroesService) { }
+	constructor(private superHeroesService: SuperHeroesService) {}
 
 	ngOnInit(): void {
-		this.superHeroesService.getAll()
+		this.superHeroesService
+			.getAll()
 			.pipe(
-				tap(superHeroes => this.superHeroes = superHeroes),
-				finalize(() => this.isLoading = false),
+				tap(superHeroes => (this.superHeroes = superHeroes)),
+				finalize(() => (this.isLoading = false)),
 				catchError(e => {
 					this.hasError = true;
 					return of(e);
@@ -41,5 +42,4 @@ export class SuperheroesSearchPageComponent implements OnInit {
 	onResetSuperHero(): void {
 		this.currentSuperHero = null;
 	}
-
 }

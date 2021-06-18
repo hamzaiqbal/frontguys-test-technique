@@ -10,18 +10,17 @@ export class SuperheroesSearchFormComponent implements OnInit {
 	@Input() currentSuperHero: ISuperHero;
 	@Output() selectSuperHero: EventEmitter<ISuperHero> = new EventEmitter();
 
-	constructor() { }
+	constructor() {}
 
 	get superHeroesCount(): number {
 		return this.superHeroes.length;
 	}
 
-	ngOnInit(): void {
-	}
+	ngOnInit(): void {}
 
 	trackByFn = (superHero: ISuperHero) => {
 		return superHero.id;
-	}
+	};
 
 	onSelect(): void {
 		this.selectSuperHero.emit(this.currentSuperHero);

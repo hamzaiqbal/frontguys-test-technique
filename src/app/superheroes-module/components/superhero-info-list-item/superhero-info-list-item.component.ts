@@ -8,17 +8,15 @@ export class SuperheroInfoListItemComponent implements OnInit {
 	@Input() label: string;
 	@Input() value: string | string[];
 
-	constructor() { }
+	constructor() {}
 
 	ngOnInit(): void {
 		if (Array.isArray(this.value)) {
 			this.value = this.value.join(', ');
 		}
 
-		if (!this.value)
-		{
+		if (!this.value) {
 			this.value = '-';
 		}
 	}
-
 }

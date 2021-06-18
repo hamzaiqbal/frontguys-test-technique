@@ -20,12 +20,6 @@ import {
 		SuperheroPowerstatsChartBarComponent,
 		SuperheroInfoListItemComponent
 	],
-	imports: [
-		CommonModule,
-		RouterModule,
-		FormsModule,
-		NgSelectModule,
-		TranslateModule,
-	]
+	imports: [CommonModule, RouterModule, FormsModule, NgSelectModule, TranslateModule]
 })
-export class SuperHeroesModule { }
+export class SuperHeroesModule {}

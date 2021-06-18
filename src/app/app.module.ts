@@ -10,11 +10,9 @@ import { NgSelectModule } from '@ng-select/ng-select';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 
-
 export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
 	return new TranslateHttpLoader(http);
 }
-
 
 @NgModule({
 	declarations: [AppComponent],
@@ -33,9 +31,9 @@ export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
 				useFactory: HttpLoaderFactory,
 				deps: [HttpClient]
 			}
-		}),
+		})
 	],
 	providers: [],
 	bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

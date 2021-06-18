@@ -7,7 +7,7 @@ const routes: Routes = [
 	{
 		path: RoutesDefinitions.SuperHeroesSearchRoutePath,
 		component: SuperheroesSearchPageComponent,
-		data: { },
+		data: {}
 	},
 
 	// Redirects to search page

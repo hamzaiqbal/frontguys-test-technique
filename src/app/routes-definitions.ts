@@ -4,7 +4,6 @@
 export const BaseRoutePath = '';
 export const SuperHeroesSearchRoutePath = 'superheroes';
 
-
 /**
  * Routes full paths
  */

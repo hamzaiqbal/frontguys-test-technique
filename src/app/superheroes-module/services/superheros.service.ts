@@ -8,9 +8,7 @@ import { HttpClient } from '@angular/common/http';
 	providedIn: 'root'
 })
 export class SuperHeroesService {
-
-	constructor(private http: HttpClient) {
-	}
+	constructor(private http: HttpClient) {}
 
 	getAll(): Observable<ISuperHero[]> {
 		const url = `${environment.apiUrl}/all.json`;

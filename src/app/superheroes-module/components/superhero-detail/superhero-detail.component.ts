@@ -9,10 +9,9 @@ export class SuperheroDetailComponent implements OnInit {
 	@Input() currentSuperHero: ISuperHero;
 	@Output() close: EventEmitter<void> = new EventEmitter();
 
-	constructor() { }
+	constructor() {}
 
-	ngOnInit(): void {
-	}
+	ngOnInit(): void {}
 
 	onClose(): void {
 		this.close.emit();

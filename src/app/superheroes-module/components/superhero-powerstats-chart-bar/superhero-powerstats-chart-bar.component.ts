@@ -10,9 +10,9 @@ export class SuperheroPowerstatsChartBarComponent implements OnInit {
 
 	rangeClass: 'high' | 'average' | 'low' = 'low';
 
-	constructor() { }
+	constructor() {}
 
 	ngOnInit(): void {
-		this.rangeClass = this.value > 60 ? 'high' : (this.value > 30 ? 'average' : 'low');
+		this.rangeClass = this.value > 60 ? 'high' : this.value > 30 ? 'average' : 'low';
 	}
 }
