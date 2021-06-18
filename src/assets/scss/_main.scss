@@ -14,7 +14,7 @@ html
 
 body
 {
-	background: $body-bg url('/assets/images/bg_body.jpg') 50% 50% no-repeat;
+	background: $body-bg 50% 50% no-repeat;
 	background-size: cover;
 	color: $body-color;
 	padding: $spacer-lg $spacer $spacer;

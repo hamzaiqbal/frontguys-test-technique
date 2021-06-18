@@ -42,12 +42,13 @@ $red: 							#dc3545 !default;
 $orange:						#fd7e14 !default;
 $green: 						#28a745 !default;
 
-$body-bg: 						$white !default;
-$body-color: 					$black !default;
 $primary: 						$yellow !default;
 $primary-light: 				lighten($primary, 10%) !default;
 $primary-dark: 					darken($primary, 10%) !default;
 $secondary: 					$blue !default;
+
+$body-bg: 						$secondary !default;
+$body-color: 					$black !default;
 
 
 // Spacers
