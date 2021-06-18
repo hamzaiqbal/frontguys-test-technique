@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { ISuperHero } from 'src/app/superheroes-module/models/superhero.model';
+import { ISuperHero } from '@app/superheroes-module/models/superhero.model';
 
 @Component({
 	selector: 'superheroes-search-form',

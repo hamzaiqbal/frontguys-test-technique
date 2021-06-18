@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import * as RoutesDefinitions from 'src/app/routes-definitions';
-import { SuperheroesSearchPageComponent } from 'src/app/superheroes-module/pages';
+import * as RoutesDefinitions from '@app/routes-definitions';
+import { SuperheroesSearchPageComponent } from '@app/superheroes-module/pages';
 
 const routes: Routes = [
 	{
