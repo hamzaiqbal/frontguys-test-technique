@@ -20,7 +20,7 @@ export class SuperheroesSearchFormComponent implements OnInit {
 
 	trackByFn = (superHero: ISuperHero) => {
 		return superHero.id;
-	};
+	}
 
 	onSelect(): void {
 		this.selectSuperHero.emit(this.currentSuperHero);
