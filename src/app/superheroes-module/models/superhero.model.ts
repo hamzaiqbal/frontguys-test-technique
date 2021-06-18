@@ -1,4 +1,4 @@
-import { SuperHeroAlignment, SuperHeroGender } from '@app/superheroes-module/enums';
+import { SuperHeroAlignment, SuperHeroGender } from '../../superheroes-module/enums';
 
 export interface ISuperHero {
 	id: number;

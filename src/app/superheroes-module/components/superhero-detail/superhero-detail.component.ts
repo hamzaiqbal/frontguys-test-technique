@@ -1,4 +1,4 @@
-import { ISuperHero } from '@app/superheroes-module/models/superhero.model';
+import { ISuperHero } from '../../../superheroes-module/models';
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({

@@ -4,13 +4,13 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { NgSelectModule } from '@ng-select/ng-select';
-import { SuperheroesSearchPageComponent } from '@app/superheroes-module/pages';
+import { SuperheroesSearchPageComponent } from '../superheroes-module/pages';
 import {
 	SuperheroDetailComponent,
 	SuperheroesSearchFormComponent,
 	SuperheroPowerstatsChartBarComponent,
 	SuperheroInfoListItemComponent
-} from '@app/superheroes-module/components';
+} from '../superheroes-module/components';
 
 @NgModule({
 	declarations: [

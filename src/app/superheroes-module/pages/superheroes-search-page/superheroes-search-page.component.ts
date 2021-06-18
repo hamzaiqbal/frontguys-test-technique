@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ISuperHero } from '@app/superheroes-module/models/superhero.model';
-import { SuperHeroesService } from '@app/superheroes-module/services/superheros.service';
+import { ISuperHero } from '../../../superheroes-module/models';
+import { SuperHeroesService } from '../../../superheroes-module/services/superheros.service';
 import { catchError, finalize, tap } from 'rxjs/operators';
 import { of } from 'rxjs';
 

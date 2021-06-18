@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { SuperHeroesModule } from '@app/superheroes-module/superheroes.module';
+import { SuperHeroesModule } from './superheroes-module/superheroes.module';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { NgSelectModule } from '@ng-select/ng-select';

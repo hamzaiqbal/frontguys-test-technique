@@ -1,5 +1,5 @@
 import { environment } from 'src/environments/environment';
-import { ISuperHero } from './../models/superhero.model';
+import { ISuperHero } from './../models';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
