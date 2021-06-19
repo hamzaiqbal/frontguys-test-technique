@@ -17,9 +17,14 @@ body
 	background: $body-bg 50% 50% no-repeat;
 	background-size: cover;
 	color: $body-color;
-	padding: $spacer-lg $spacer $spacer;
+	padding: $spacer $spacer-sm $spacer-sm;
 	min-height: 100vh;
 	overflow-x: hidden;
+
+	@media screen and (min-width: $content-max-width)
+	{
+		padding: $spacer-lg $spacer $spacer;
+	}
 }
 
 strong
@@ -33,40 +38,22 @@ h1, h2, h3, h4, h5, h6
 	line-height: $heading-line-height;
 }
 
-h1
+@each $heading, $values in $heading-styles
 {
-	font-size: $h1-font-size;
-	margin: $h1-margin;
-}
+	$font-size: nth($values, 1);
+	$font-size-sm: nth($values, 2);
+	$margin: nth($values, 3);
 
-h2
-{
-	font-size: $h2-font-size;
-	margin: $h2-margin;
-}
+	#{$heading}
+	{
+		font-size: $font-size-sm;
+		margin: $margin;
 
-h3
-{
-	font-size: $h3-font-size;
-	margin: $h3-margin;
-}
-
-h4
-{
-	font-size: $h4-font-size;
-	margin: $h4-margin;
-}
-
-h5
-{
-	font-size: $h5-font-size;
-	margin: $h5-margin;
-}
-
-h6
-{
-	font-size: $h6-font-size;
-	margin: $h6-margin;
+		@media screen and (min-width: $content-max-width)
+		{
+			font-size: $font-size;
+		}
+	}
 }
 
 figure
@@ -113,8 +100,13 @@ img
 	background: $secondary;
 	color: $white;
 	border: $border;
-	padding: $spacer;
+	padding: $spacer-sm;
 	text-align: center;
+
+	@media screen and (min-width: $content-max-width)
+	{
+		padding: $spacer;
+	}
 }
 
 .modal
@@ -169,10 +161,10 @@ img
 
 	&-title
 	{
+		@include text-outline(0.05em);
 		flex: 1;
 		margin: 0;
-		@include text-outline(0.05em);
-	color: $primary;
+		color: $primary;
 	}
 }
 
@@ -243,16 +235,27 @@ img
 
 .form-input
 {
-	flex: 1;
-
 	&-group
 	{
-		display: flex;
-		align-items: center;
-
 		.btn
 		{
-			margin: 0 0 0 $spacer;
+			margin-top: $spacer-sm;
+		}
+	}
+
+	@media screen and (min-width: $content-max-width)
+	{
+		flex: 1;
+
+		&-group
+		{
+			display: flex;
+			align-items: center;
+
+			.btn
+			{
+				margin: 0 0 0 $spacer;
+			}
 		}
 	}
 }

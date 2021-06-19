@@ -10,18 +10,28 @@ $line-height-base: 				1.5 !default;
 $heading-line-height: 			1.1 !default;
 $brand-letter-spacing: 			0.05em !default;
 
+
+$font-size-max: 				px-to-rem(100px) !default;
+$font-size-xxl: 				px-to-rem(60px) !default;
 $font-size-xl: 					px-to-rem(48px) !default;
 $font-size-lg: 					px-to-rem(32px) !default;
 $font-size-md: 					px-to-rem(24px) !default;
 $font-size-sm: 					px-to-rem(14px) !default;
 $font-size-xs: 					px-to-rem(12px) !default;
 
-$h1-font-size: 					px-to-rem(100px) !default;
+$h1-font-size: 					$font-size-max !default;
 $h2-font-size: 					$font-size-xl !default;
 $h3-font-size: 					$font-size-lg !default;
 $h4-font-size: 					$font-size-md !default;
 $h5-font-size: 					$font-size-base !default;
 $h6-font-size: 					$font-size-sm !default;
+
+$h1-font-size-sm: 				$font-size-xxl !default;
+$h2-font-size-sm: 				$font-size-lg !default;
+$h3-font-size-sm: 				$font-size-md !default;
+$h4-font-size-sm: 				$font-size-base !default;
+$h5-font-size-sm: 				$font-size-sm !default;
+$h6-font-size-sm: 				$font-size-xs !default;
 
 $h1-margin: 					0 0 .5em !default;
 $h2-margin: 					0 0 .5em !default;
@@ -29,6 +39,15 @@ $h3-margin: 					0 0 .5em !default;
 $h4-margin: 					.5em 0 1.5em !default;
 $h5-margin: 					.5em 0 1.5em !default;
 $h6-margin: 					.5em 0 1.5em !default;
+
+$heading-styles: (
+					h1:	($h1-font-size, $h1-font-size-sm, $h1-margin),
+					h2:	($h2-font-size, $h2-font-size-sm, $h2-margin),
+					h3:	($h3-font-size, $h3-font-size-sm, $h3-margin),
+					h4:	($h4-font-size, $h4-font-size-sm, $h4-margin),
+					h5:	($h5-font-size, $h5-font-size-sm, $h5-margin),
+					h6:	($h6-font-size, $h6-font-size-sm, $h6-margin)
+				) !default;
 
 
 // Colors
